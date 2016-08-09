@@ -4,6 +4,8 @@ The SQL active admin page
 
 Add page to your ActiveAdmin panel that allow execute SQL requests and show result in table
 
+[![Version](http://img.shields.io/gem/v/activeadmin-sqlpage.svg)](https://rubygems.org/gems/activeadmin-sqlpage)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,7 +24,7 @@ Or install it yourself as:
 
 ## Usage
 
-To add SQL Page to your active admin place this peace of code for example to app/admin/sql.rb:
+To add SQL Page to your active admin place this peace of code for example to `app/admin/sql.rb`:
 
 ```ruby
 ActiveAdmin::SqlPage::register
@@ -39,4 +41,4 @@ The gem is available as open source under the terms of the [MIT License](http://
 
 ## Copyright
 
-Copyright (c) 2016-present Serguei Okladnikov
+Copyright (c) 2016-present Serguei Okladnikov <oklaspec@gmail.com>
