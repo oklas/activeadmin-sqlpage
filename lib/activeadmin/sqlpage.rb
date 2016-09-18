@@ -1,3 +1,4 @@
+B
 require "activeadmin/sqlpage/version"
 
 module ActiveAdmin
@@ -21,11 +22,16 @@ module ActiveAdmin
                       name: :authenticity_token,
                       value: form_authenticity_token
 
-                    textarea name: :sql do
+                    textarea name: :sql,
+                      onkeypress: %{
+                        if(event.keyCode==10||(event.ctrlKey && event.keyCode==13)) {
+                          $('form').submit();
+                        }
+                      }, autofocus: 1, title: 'Ctrl+Enter' do
                       params[:sql]
                     end
 
-                    button :submit
+                    button :submit, title: 'Ctrl+Enter'
                   end
                 end
 

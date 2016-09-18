@@ -2,7 +2,7 @@
 
 The SQL active admin page
 
-Add page to your ActiveAdmin panel that allow execute SQL requests and show result in table
+Add page to your ActiveAdmin panel that allow execute raw SQL requests and show result in table
 
 [![Version](http://img.shields.io/gem/v/activeadmin-sqlpage.svg)](https://rubygems.org/gems/activeadmin-sqlpage)
 

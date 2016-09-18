@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["oklaspec@gmail.com"]
 
   spec.summary       = %q{The SQL active admin page}
-  spec.description   = %q{Add page to your ActiveAdmin panel that allow execute SQL requests and show result in table}
+  spec.description   = %q{Add page to your ActiveAdmin panel that allow execute raw SQL requests and show result in table}
   spec.homepage      = "http://github.com/oklas/activeadmin-sqlpage"
   spec.license       = "MIT"
 
