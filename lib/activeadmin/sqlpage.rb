@@ -1,4 +1,3 @@
-B
 require "activeadmin/sqlpage/version"
 
 module ActiveAdmin
@@ -38,24 +37,29 @@ module ActiveAdmin
                 unless params[:sql].nil?
 
                   begin
-                    result = ActiveRecord::Base.connection.exec_query( params[:sql] )
+                    result = ActiveRecord::Base.connection.execute( params[:sql] )
+                    if result
+                      result = ActiveRecord::Result.new(result.fields, result.to_a)
+                    end
                   rescue Exception => e
                     result = ActiveRecord::Result.new( [:error], [[e.message]] )
                   end
 
-                  table class: 'index_table index' do
-                    thead do
-                      tr do
-                        result.columns.each do |name|
-                          th name, class: :col
+                  unless result.nil?
+                    table class: 'index_table index' do
+                      thead do
+                        tr do
+                          result.columns.each do |name|
+                            th name, class: :col
+                          end
                         end
                       end
-                    end
-                    tbody do
-                      result.rows.each_with_index do |col,i|
-                        tr class: (0==i%2?'odd':'even') do
-                          col.each do |val|
-                            td val, class: :col
+                      tbody do
+                        result.rows.each_with_index do |col,i|
+                          tr class: (0==i%2?'odd':'even') do
+                            col.each do |val|
+                              td val, class: :col
+                            end
                           end
                         end
                       end
