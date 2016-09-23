@@ -29,6 +29,9 @@ To add SQL Page to your active admin place this peace of code for example to `ap
 ```ruby
 ActiveAdmin::SqlPage::register
 ```
+
+Open your site at active admin page, navigate menu `SQL`, enter raw sql request in textarea, and press `Ctrl-Enter` hotkey or click `submit`.
+
 Be carefull to execute sql requests. It may upset the consistent of your database. It is recomented to enable this page for worked project where only advanced user may have access to execute sql.
 
 ## Contributing
