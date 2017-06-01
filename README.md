@@ -1,6 +1,6 @@
 # ActiveAdmin::SqlPage
 
-The SQL active admin page
+This is **`rails dbconsole`** online
 
 Add page to your ActiveAdmin panel that allow execute raw SQL requests and show result in table
 
